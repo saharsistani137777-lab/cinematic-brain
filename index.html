@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinematic Brain - Neural Movie Intelligence</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-dark bg-dark px-4">
+            <span class="navbar-brand mb-0 h1">
+                <span class="brain-glow">🧠</span> Cinematic Brain
+            </span>
+            <div class="ms-auto">
+                <span class="text-white-50 me-3">User ID: <span id="user-id">1</span></span>
+                <button class="btn btn-outline-light btn-sm" id="refresh-data">🔄 Sync</button>
+            </div>
+        </nav>
 
+        <div class="row g-0">
+            <div class="col-md-8 p-4">
+                <div class="row mb-4">
+                    <div class="col">
+                        <div class="card bg-dark text-white">
+                            <div class="card-header bg-primary bg-opacity-25">
+                                <h5 class="mb-0"> Neural Activity Scanner</h5>
+                            </div>
+                            <div class="card-body p-0" style="height: 500px;" id="brain-container">
+                                <div class="text-center p-5" id="brain-loading">
+                                    <div class="spinner-border text-primary" role="status"></div>
+                                    <p class="mt-2">Scanning neural patterns...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="card bg-dark text-white">
+                            <div class="card-header bg-success bg-opacity-25">
+                                <h5 class="mb-0">🎬 Neural Recommendations</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row" id="recommendations-container">
+                                    <div class="col-12 text-center p-4">
+                                        <div class="spinner-border text-success" role="status"></div>
+                                        <p class="mt-2">Loading recommendations...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 p-4 bg-dark bg-opacity-75">
+                <div class="card bg-transparent border-secondary text-white mb-4">
+                    <div class="card-header border-secondary">
+                        <h5 class="mb-0"> Mood Detector</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-center mb-3">
+                            <span class="display-1" id="mood-emoji">🧠</span>
+                        </div>
+                        <h4 class="text-center" id="mood-text">Select a movie</h4>
+                        <p class="text-center text-white-50" id="wave-type">-</p>
+                        <div class="mt-3">
+                            <div class="progress mb-2" style="height: 20px;">
+                                <div class="progress-bar bg-danger" id="brain-prefrontal" style="width: 0%">PFC</div>
+                            </div>
+                            <div class="progress mb-2" style="height: 20px;">
+                                <div class="progress-bar bg-info" id="brain-limbic" style="width: 0%">Limbic</div>
+                              </div>
+                            <div class="progress mb-2" style="height: 20px;">
+                                <div class="progress-bar bg-success" id="brain-visual" style="width: 0%">Visual</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-transparent border-secondary text-white">
+                    <div class="card-header border-secondary">
+                        <h5 class="mb-0"> Neural Controls</h5>
+                    </div>
+                    <div class="card-body">
+                        <label class="form-label">Wave Filter</label>
+                        <select class="form-select bg-dark text-white mb-3" id="wave-filter">
+                            <option value="alpha">Alpha Waves (Relaxed)</option>
+                            <option value="beta">Beta Waves (Focused)</option>
+                            <option value="gamma">Gamma Waves (Emotional)</option>
+                            <option value="delta">Delta Waves (Deep)</option>
+                            <option value="theta">Theta Waves (Creative)</option>
+                        </select>
+                        <button class="btn btn-primary w-100 mb-2" id="apply-wave-filter">
+                             Scan Neural Patterns
+                        </button>
+                        <button class="btn btn-outline-secondary w-100" id="random-movie">
+                             Random Neural Stimulus
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
