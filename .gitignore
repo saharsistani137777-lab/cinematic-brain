@@ -1,0 +1,30 @@
+# Environments
+.env
+venv/
+env/
+pycache/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Database
+*.db
+*.sqlite
+
+# Logs
+*.log
+
+# API Keys
+config_local.py
+*.key
