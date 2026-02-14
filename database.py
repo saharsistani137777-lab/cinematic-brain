@@ -1,6 +1,6 @@
-
 import sqlite3
 import pandas as pd
+import time
 from contextlib import contextmanager
 
 class DatabaseManager:
